@@ -18,10 +18,9 @@ J'explique comment installer Linux si vous avez fait l'erreur d'acheter un ACER 
 
 ## Pourquoi l'installation de linux ne marche-t-elle pas ?
 
-Dans son BIOS , ACER :
+ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
 
-- ne permet pas à Linux d'écrire , même en ayant Secure Boot : [Disabled] , d'où les plantages
-- n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut être plus , je ne sais pas )
+ACER n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut être plus , je ne sais pas )
 
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
