@@ -35,7 +35,7 @@ Appuyer sur F2 au démarrage pour entrer dans le BIOS
 	Titre       : InsideH20 Setup Utility : Rev 5.0
 	Information : System BIOS Version     : 1.03 à 1.19
 	Main        : F12 Boot Menu           : [Enabled]
-	Security    : Supervisor Password Is  : Set						mettre un password pour pouvoir modifier Secure Boot
+	Security    : Supervisor Password Is  : Set			mettre un password pour pouvoir modifier Secure Boot
 	Boot        : Boot Mode               : [UEFI]
 	Boot        : Secure Boot             : [Disabled]
 	Boot        : Boot priority order     : 1. Windows Boot Manager
@@ -54,10 +54,10 @@ L'installation de grub par Linux s'est quand même exécutée , mais l'écriture
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
 	sudo su
-	mount /dev/sda1 /boot/efi								si sda1 est la partition EFI
+	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
 	cd /boot/efi
 	mkdir EFI/Boot
-	cp EFI/ubuntu/shimx64.efi EFI/Boot/grubx64.efi			si shimx64.efi est le fichier installé par Linux
+	cp EFI/ubuntu/shimx64.efi EFI/Boot/grubx64.efi		si shimx64.efi est le fichier installé par Linux
 	
 Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
@@ -73,20 +73,19 @@ Actuellement , il faut passer par F12 pour démarrer Linux
 ## Modifier Linux pour activer le démarrage avec grub
 
 	sudo su
-	mount /dev/sda1 /boot/efi								si sda1 est la partition EFI
+	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
 	cd /boot/efi/EFI
-	mv Microsoft MS											MS ou un autre nom de votre choix
+	mv Microsoft MS						MS ou un autre nom de votre choix
 
 Windows Boot Manager n'est alors plus vu par le BIOS
 
 	efibootmgr -v
-		BootCurrent: 0000
-		Timeout: 0 seconds
-		BootOrder: 0000,2001,2002,2003
-		Boot0000\* Linux HD(1,GPT,74e4d112-02f8-41bc-868e-5c73d063f8d9,0x800,0x32000)/File(\EFI\Boot\grubx64.efi)RC
-		Boot2001\* EFI USB Device	RC
-		Boot2002\* EFI DVD/CDROM	RC
-		Boot2003\* EFI Network	 RC
+	BootCurrent: 0000 seconds
+	BootOrder: 0000,2001,2002,2003
+	Boot0000\* Linux HD(1,GPT,74e4d112-02f8-41bc-868e-5c73d063f8d9,0x800,0x32000)/File(\EFI\Boot\grubx64.efi)RC
+	Boot2001\* EFI USB Device	RC
+	Boot2002\* EFI DVD/CDROM	RC
+	Boot2003\* EFI Network	 RC
 
 au démarrage en appuyant sur F2
 
