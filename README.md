@@ -2,11 +2,13 @@
 	Date    : 01/10/2019
 	Version : 1.00
 	Auteur  : facila@gmx.fr
-~~~
+
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
+
 Je ne détaille pas non plus le fonctionnement général de EFI
+
 Le problème n'est pas là , tous les tutos disponibles sur internet le font trés bien
-~~~
+
 J'explique comment installer Linux si vous avez fait l'erreur d'acheter un ACER et que vous rencontrerez les problèmes suivants :
 
 - plantage à la fin de l'installation de linux
@@ -41,11 +43,12 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 	1. Windows Boot Manager
 	
 ## Installer Linux Mint à partir d'une clé USB bootable
-~~~
 Exécuter l'installation de Linux
+
 Juste avant la fin de l'installation , le PC se plante
+
 L'installation de grub par Linux s'est quand même exécutée , mais l'écriture dans le BIOS n'étant pas permise le PC se plante
-~~~
+
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	sudo su
 	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
@@ -98,9 +101,11 @@ remplacer les entrées suivantes
 grub retrouve alors le chemin pour démarrer Windows 10
 
 ## Comment faire autrement ?
-~~~
+
 Est-ce que quelqu'un à une autre solution ?
+
 Existe-t-il une version de BIOS compatible ACER et Linux Mint ?
+
 ACER peut-il changer de BIOS et faire comme les autres constructeurs ?
+
 Linux Mint peut-il prendre en compte ce cas dans sa procédure d'installation ?
-~~~
