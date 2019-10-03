@@ -10,7 +10,7 @@ Je ne détaille pas non plus le fonctionnement général de EFI
 
 Le problème n'est pas là , tous les tutos disponibles sur internet le font trés bien
 
-J'explique comment installer Linux si vous avez fait l'erreur d'acheter un ACER et que vous rencontrerez les problèmes suivants :
+J'explique comment installer Linux si comme moi vous avez un ACER et que vous rencontrerez les problèmes suivants :
 
 - plantage à la fin de l'installation de linux
 - plantage à l'installation ou la réparation de grub
