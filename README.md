@@ -1,7 +1,7 @@
 # Installer Linux Mint sur un ACER Aspire ES17 ES1-732
 
-	Date    : 01/10/2019
-	Version : 1.00
+	Date    : 20/12/2019
+	Version : 1.01
 	Auteur  : facila@gmx.fr
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
@@ -30,6 +30,8 @@ Linux Mint installe dans la partition EFI , par exemple /dev/sda1
 	/EFI/ubuntu/shimx64.efi ou /EFI/ubuntu/grubx64.efi
 
 Le fichier de Linux n'est donc pas reconnu par le BIOS de l'ACER
+Il faut donc copier le fichier créé par Linux Mint en /EFI/Boot/grubx64.efi
+Et si windows est installé , déplacer le fichier /EFI/Microsoft/Boot/bootmgfw.efi dans un autre répertoire
 
 ## Configuration du BIOS de l'ACER :
 
