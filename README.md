@@ -55,12 +55,15 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 ## Installer Linux Mint à partir d'une clé USB bootable
 
 Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
-Je vous conseille ensuite de garder cette clé qui pourra servira en cas de problème
+
+Je vous conseille ensuite de garder cette clé qui pourra servir en cas de problème
 
 Exécuter l'installation de Linux
+
 Juste avant la fin de l'installation , le PC se plante
 
 L'installation de grub par Linux s'est quand même exécutée , mais l'écriture dans le BIOS n'étant pas permise le PC se plante
+
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
 	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
@@ -145,7 +148,7 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi/EFI
 	ll
-	si les répertoires MS et Microsoft existe , passer la comme suivante
+	si les répertoires MS et Microsoft existent , passer la comme suivante
 	mv Microsoft Microsoft.old
 	
 Enlever la clé USB et redémarrer
