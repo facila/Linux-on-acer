@@ -20,10 +20,8 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
 
 ACER n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut être plus , je ne sais pas )
-
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
-
 Linux Mint installe dans la partition EFI , par exemple /dev/sda1
 
 	/EFI/ubuntu/shimx64.efi ou /EFI/ubuntu/grubx64.efi
