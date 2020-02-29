@@ -132,7 +132,7 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi/EFI
 	ll
-	si le répertoire Microsoft existe , passer la comme suivante
+	si les répertoires MS et Microsoft existe , passer la comme suivante
 	mv Microsoft Microsoft.old
 	
 Enlever la clé USB et redémarrer
