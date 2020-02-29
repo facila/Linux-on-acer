@@ -54,12 +54,13 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 	
 ## Installer Linux Mint à partir d'une clé USB bootable
 
-Exécuter l'installation de Linux
+Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
+Je vous conseille ensuite de garder cette clé qui pourra servira en cas de problème
 
+Exécuter l'installation de Linux
 Juste avant la fin de l'installation , le PC se plante
 
 L'installation de grub par Linux s'est quand même exécutée , mais l'écriture dans le BIOS n'étant pas permise le PC se plante
-
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
 	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
@@ -119,6 +120,22 @@ remplacer les entrées suivantes
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
 grub retrouve alors le chemin pour démarrer Windows 10
+
+## Mise à jour de Linux ou de Windows
+
+Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
+
+Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
+
+	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
+	sudo su
+	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
+	cd /boot/efi/EFI
+	ll
+	si le répertoire Microsoft existe , passer la comme suivante
+	mv Microsoft Microsoft.old
+	
+Enlever la clé USB et redémarrer
 
 ## Comment faire autrement ?
 
