@@ -1,5 +1,4 @@
 # Installer Linux Mint sur un ACER Aspire ES17 ES1-732
-
 	Date    : 29/02/2020
 	Version : 1.02
 	Auteur  : facila@gmx.fr
@@ -103,11 +102,11 @@ Windows Boot Manager n'est alors plus vu par le BIOS
 	Boot2002\* EFI DVD/CDROM	RC
 	Boot2003\* EFI Network	 RC
 
-au démarrage en appuyant sur F2
+Au démarrage en appuyant sur F2
 
 	Boot        : Boot priority order     : 1. Linux
 
-au démarrage en appuyant sur F12
+Au démarrage en appuyant sur F12
 
 	Titre : Boot Manager
 	1. Linux
@@ -116,23 +115,23 @@ Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée
 
 ## Modifier Linux pour réactiver Windows 10 dans grub
 
-modifier le fichier grub.cfg
+Modifier le fichier grub.cfg
 
 	sudo vi /boot/grub/grub.cfg
 	
-remplacer les entrées suivantes
+Remplacer les entrées suivantes
 	
 	menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
-les mises à jour de Linux peuvent recréer le bloc Windows d'origine
+Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
 
-il faut donc déplacer le bloc de Windows 10 de la section 10_linux à la section 40_custom
+Il faut donc déplacer le bloc de Windows 10 de la section 10_linux à la section 40_custom
 
 	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/10_linux ###
 	coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
 	
-sauvegarder et quitter le fichier dans vi
+Sauvegarder et quitter le fichier dans vi
 
 	escape :x
 
