@@ -113,15 +113,28 @@ Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée
 
 ## Modifier Linux pour réactiver Windows 10 dans grub
 
-remplacer les entrées suivantes
+modifier le fichier grub.cfg
 
 	sudo vi /boot/grub/grub.cfg
+	
+remplacer les entrées suivantes
+	
 	menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
+les mises à jour de Linux peuvent recréer le bloc Windows d'origine
+il faut donc déplacer le bloc de Windows 10 de la section 10_linux à la section 40_custom
+
+	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/10_linux ###
+	coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
+	
+sauvegarder et quitter le fichier dans vi
+
+	escape :x
+
 grub retrouve alors le chemin pour démarrer Windows 10
 
-## Mise à jour de Linux ou de Windows
+## Mise à jour de Windows
 
 Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
 
