@@ -62,8 +62,11 @@ L'installation de grub par Linux s'est quand même exécutée , mais l'écriture
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
+	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
 	sudo su
-	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
+	fdisk -l                                                noter le nom de la partition EFI
+	mkdir /boot/efi
+	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi
 	mkdir EFI/Boot
 	cp EFI/ubuntu/shimx64.efi EFI/Boot/grubx64.efi		si shimx64.efi est le fichier installé par Linux
