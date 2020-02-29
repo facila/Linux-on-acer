@@ -126,6 +126,7 @@ remplacer les entrées suivantes
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
 les mises à jour de Linux peuvent recréer le bloc Windows d'origine
+
 il faut donc déplacer le bloc de Windows 10 de la section 10_linux à la section 40_custom
 
 	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/10_linux ###
