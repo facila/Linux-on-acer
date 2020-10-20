@@ -51,6 +51,7 @@ Linux Mint installe le fichier suivant dans la partition EFI
 	/EFI/ubuntu/grubx64.efi
 
 Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
+	
 	1 : Installer Linux Mint à partir d'une clé USB bootable
 	2 : Réinstaller grub
 	3 : Modifier grub.cfg pour prendre en compte Windows
