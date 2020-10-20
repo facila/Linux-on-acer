@@ -1,8 +1,11 @@
 # Installer Linux Mint sur un ACER Aspire ES17 ES1-732
 
-	Date    : 29/02/2020
-	Version : 1.02
+	Date    : 20/10/2020
+	Version : 2.00
 	Auteur  : facila@gmx.fr
+
+Installation testée avec Linux Mint 19.1 et 19.3
+Cette procèdure ne marche pas avec Linux Mint 20.0 , l'ACER aspire ES17 ne boot pas sur la clè usb dans cette version
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
 
