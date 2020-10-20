@@ -96,7 +96,8 @@ Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
 Sélectionner 2 et valider , le PC démarre sur Linux
 
-ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Manager existe il est toujours en premier 
+ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Manager existe il est toujours en premier
+
 Actuellement , il faut passer par F12 pour démarrer Linux
 
 ## Modifier Linux pour activer le démarrage avec grub
@@ -105,8 +106,6 @@ Actuellement , il faut passer par F12 pour démarrer Linux
 	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
 	cd /boot/efi/EFI
 	mv Microsoft MS						MS ou un autre nom de votre choix
-
-
 
 Au démarrage en appuyant sur F2
 
@@ -140,11 +139,13 @@ Remplacer les entrées suivantes
 	menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
+## Mise à jour de Linux
+
 Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
 
-Il faut donc déplacer le bloc de Windows 10 de la section 10_linux à la section 40_custom
+Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober à la section 40_custom
 
-	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/10_linux ###
+	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/30_os-prober ###
 	coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
 	
 Sauvegarder et quitter le fichier dans vi
@@ -165,7 +166,8 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	cd /boot/efi/EFI
 	ll
 	si les répertoires MS et Microsoft existent , passer la comme suivante
-	mv Microsoft Microsoft.old
+	mv MS MS.old
+	mv Microsoft MS
 	
 Enlever la clé USB et redémarrer
 
