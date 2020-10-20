@@ -113,13 +113,13 @@ ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Man
 Actuellement , il faut passer par F12 pour démarrer Linux
 
 	sudo su
-        update-grub                                             pour la prise en compte de Windows par os-prober
+ 	update-grub                                             pour la prise en compte de Windows par os-prober
 	mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	MS ou un autre nom de votre choix
 
 	vi /boot/grub/grub.cfg
            Remplacer les entrées suivantes
-	     menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
-	     chainloader /EFI/Microsoft/Boot/bootmgfw.efi	->	chainloader /EFI/MS/Boot/bootmgfw.efi
+	   	menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
+	   	chainloader /EFI/Microsoft/Boot/bootmgfw.efi	->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
 	   Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
            Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober à la section 40_custom
@@ -163,7 +163,7 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	sudo su
 	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi/EFI
-	si les répertoires MS et Microsoft existent , passer la comme suivante
+	si les répertoires MS et Microsoft existent , passer les commandes suivantes
 	mv MS MS.old
 	mv Microsoft MS
 	
