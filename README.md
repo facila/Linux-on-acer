@@ -6,7 +6,7 @@
 
 Installation testée avec Linux Mint 19.1 et 19.3
 
-Cette procèdure ne marche pas avec Linux Mint 20.0 , l'ACER aspire ES17 ne boot pas sur la clé usb dans cette version
+Cette procèdure ne marche pas avec Linux Mint 20 , l'ACER aspire ES17 ne boot pas sur la clé usb dans cette version
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
 
@@ -33,7 +33,7 @@ Linux Mint installe le fichier suivant dans la partition EFI , par exemple /dev/
 
 	/EFI/ubuntu/grubx64.efi
 
-Le fichier de Linux n'est donc pas reconnu par le BIOS de l'ACER , il faut donc :
+Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
 
 	- réinstaller grub avec l'option --no-nvram qui se fera sans essayer d'écrire dans le BIOS
 	- renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
