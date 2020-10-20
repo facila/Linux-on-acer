@@ -71,22 +71,22 @@ L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation 
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
-	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
+	setxkbmap fr                                          si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
 	sudo su
-	fdisk -l                                                noter le nom de la partition EFI et de la partition root de Linux
+	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
 	
-	mount /dev/sda5 /mnt    				si /dev/sda5 est la root de Linux
-	mount /dev/sda1 /mnt/boot/efi				si /dev/sda1 est la partition EFI
+	mount /dev/sda5 /mnt    		              si /dev/sda5 est la root de Linux
+	mount /dev/sda1 /mnt/boot/efi		    	      si /dev/sda1 est la partition EFI
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /mnt$i ; done
 	
 	rm -rf /mnt/boot/efi/EFI/ubuntu
 	apt-get install --reinstall grub-efi-amd64
-	grub-install --no-nvram --root-directory=/mnt           création du fichier grubx64.efi
+	grub-install --no-nvram --root-directory=/mnt         création du fichier grubx64.efi
 	rm -rf /mnt/boot/efi/EFI/BOOT
 	mv /mnt/boot/efi/EFI/ubuntu /mnt/boot/efi/EFI/Boot
 	
-	chroot /mnt                                             changement du root directory en /mnt
-        update-grub                                             création du fichier /boot/grub/grub.cfg
+	chroot /mnt                                           changement du root directory en /mnt
+	update-grub                                           création du fichier /boot/grub/grub.cfg
 	
 Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
