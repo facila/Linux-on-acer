@@ -92,9 +92,11 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	
 Si Linux est installé seul , l'installation est terminée
 
-	Enlever la clé et redémarrer le PC
+	Enlever la clé USB et redémarrer le PC
         
-Si linux est installé avec Windows , continuer au point 3
+Si linux est installé avec Windows
+
+  	Continuer au point 3
 	
 ## 3 : Démarrer Linux et modifier grub.cfg pour prendre en compte Windows
 
