@@ -53,8 +53,8 @@ Linux Mint installe le fichier suivant dans la partition EFI
 Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
 	
 	1 : Installer Linux Mint à partir d'une clé USB bootable
-	2 : Réinstaller grub
-	3 : Modifier grub.cfg pour prendre en compte Windows
+	2 : Réinstaller grub manuellement à partir de la clé USB
+	3 : Démarrer Linux et modifier grub.cfg pour prendre en compte Windows
         	
 ## 1 : Installer Linux Mint à partir d'une clé USB bootable
 
@@ -68,7 +68,7 @@ Juste avant la fin de l'installation sur grub2 , le PC se plante
 
 L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne se termine pas bien
 
-## 2 : Réinstaller grub
+## 2 : Réinstaller grub manuellement à partir de la clé USB
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
@@ -96,7 +96,7 @@ Si Linux est installé seul , l'installation est terminée
         
 Si linux est installé avec Windows , continuer au point 3
 	
-## 3 : Modifier grub.cfg pour prendre en compte Windows
+## 3 : Démarrer Linux et modifier grub.cfg pour prendre en compte Windows
 
 Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
