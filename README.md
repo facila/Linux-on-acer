@@ -116,7 +116,7 @@ Actuellement , il faut passer par F12 pour démarrer Linux
  	update-grub                                               pour la prise en compte de Windows par os-prober
 	mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	  MS ou un autre nom de votre choix
 
-	vi /boot/grub/grub.cfg                                    Remplacer les entrées suivantes
+	vi /boot/grub/grub.cfg                                    remplacer les entrées suivantes
 		menuentry 'Windows Boot Manager (on /dev/sda1)'   ->	menuentry 'Windows 10'
 		chainloader /EFI/Microsoft/Boot/bootmgfw.efi	  ->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
