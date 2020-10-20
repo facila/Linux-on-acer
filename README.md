@@ -37,8 +37,8 @@ Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
 
 	- réinstaller grub avec l'option --no-nvram qui se fera sans essayer d'écrire dans le BIOS
 	- renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
-	- si windows est installé , renommer le répertoire /EFI/Microsoft en /EFI/MS
 	- modifier grub.cfg pour prendre en compte /EFI/MS
+        - si windows est installé , renommer le répertoire /EFI/Microsoft en /EFI/MS
 
 ## Configuration du BIOS de l'ACER :
 
