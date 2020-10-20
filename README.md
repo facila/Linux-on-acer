@@ -100,12 +100,25 @@ ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Man
 
 Actuellement , il faut passer par F12 pour démarrer Linux
 
-## Modifier Linux pour activer le démarrage avec grub
+## Modifier Linux pour activer le démarrage avec grub en dual-boot 
 
 	sudo su
-	mount /dev/sda1 /boot/efi				si sda1 est la partition EFI
-	cd /boot/efi/EFI
-	mv Microsoft MS						MS ou un autre nom de votre choix
+        update-grub                                             pour la prise en compte de Windows par os-prober
+	mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	MS ou un autre nom de votre choix
+
+	vi /boot/grub/grub.cfg
+           Remplacer les entrées suivantes
+	     menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
+	     chainloader /EFI/Microsoft/Boot/bootmgfw.efi	->	chainloader /EFI/MS/Boot/bootmgfw.efi
+
+	   Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
+           Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober à la section 40_custom
+           Selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/30_os-prober ###
+  	   Coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
+	
+	escape :x!                                              Sauvegarder et quitter le fichier dans vi
+
+grub retrouve alors le chemin pour démarrer Windows 10
 
 Au démarrage en appuyant sur F2
 
@@ -128,29 +141,7 @@ Linux devient le premier Boot dans le BIOS
 	Boot2002\* EFI DVD/CDROM	RC
 	Boot2003\* EFI Network	 RC
 	
-## Modifier Linux pour réactiver Windows 10 dans grub
 
-Modifier le fichier grub.cfg
-
-	sudo vi /boot/grub/grub.cfg
-	
-Remplacer les entrées suivantes
-	
-	menuentry 'Windows Boot Manager (on /dev/sda1)' 	->	menuentry 'Windows 10'
-	chainloader /EFI/Microsoft/Boot/bootmgfw.efi		->	chainloader /EFI/MS/Boot/bootmgfw.efi
-
-Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
-
-Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober à la section 40_custom
-
-	selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/30_os-prober ###
-	coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
-	
-Sauvegarder et quitter le fichier dans vi
-
-	escape :x
-
-grub retrouve alors le chemin pour démarrer Windows 10
 
 ## Mise à jour de Windows
 
