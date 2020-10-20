@@ -94,7 +94,7 @@ Si Linux est installé seul , l'installation est terminée
 
 	Enlever la clé USB et redémarrer le PC
         
-Si linux est installé avec Windows
+Si Linux est installé avec Windows
 
   	Continuer au point 3
 	
