@@ -20,27 +20,7 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 - plantage à l'installation ou la réparation de grub
 - plantage sur la commande efibootmgr lorsque l'on essaye de modifier le BIOS
 
-## Pourquoi l'installation de linux ne marche-t-elle pas ?
-
-ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
-
-ACER n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut être plus , je ne sais pas )
-
-	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
-	Linux			: /EFI/Boot/grubx64.efi
-
-Linux Mint installe le fichier suivant dans la partition EFI , par exemple /dev/sda1
-
-	/EFI/ubuntu/grubx64.efi
-
-Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
-
-	- réinstaller grub avec l'option --no-nvram qui se fera sans essayer d'écrire dans le BIOS
-	- renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
-	- modifier grub.cfg pour prendre en compte /EFI/MS
-        - si windows est installé , renommer le répertoire /EFI/Microsoft en /EFI/MS
-
-## Configuration du BIOS de l'ACER :
+## Configuration du BIOS et du BOOT de l'ACER avant l'installation :
 
 Appuyer sur F2 au démarrage pour entrer dans le BIOS
 
@@ -57,7 +37,26 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 	Titre : Boot Manager
 	1. Windows Boot Manager
 	
-## Installer Linux Mint à partir d'une clé USB bootable
+## Pourquoi l'installation de linux ne marche-t-elle pas ?
+
+ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
+
+ACER n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut être plus , je ne sais pas )
+
+	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
+	Linux			: /EFI/Boot/grubx64.efi
+
+Linux Mint installe le fichier suivant dans la partition EFI
+
+	/EFI/ubuntu/grubx64.efi
+
+Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , il faut donc :
+
+        1 : Installer Linux Mint à partir d'une clé USB bootable
+	2 : Réinstaller grub
+	3 : Modifier grub.cfg pour prendre en compte Windows
+        	
+## 1 : Installer Linux Mint à partir d'une clé USB bootable
 
 Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
 
@@ -68,6 +67,8 @@ Exécuter l'installation de Linux
 Juste avant la fin de l'installation sur grub2 , le PC se plante
 
 L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne se termine pas bien
+
+## 2 : Réinstaller grub
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
@@ -81,13 +82,22 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	
 	rm -rf /mnt/boot/efi/EFI/ubuntu
 	apt-get install --reinstall grub-efi-amd64
-	grub-install --no-nvram --root-directory=/mnt         création du fichier grubx64.efi
+	grub-install --no-nvram --root-directory=/mnt         création du fichier grubx64.efi , --no-nvram ne fait pas l'installation dans le BIOS
+	
 	rm -rf /mnt/boot/efi/EFI/BOOT
-	mv /mnt/boot/efi/EFI/ubuntu /mnt/boot/efi/EFI/Boot
+	mv /mnt/boot/efi/EFI/ubuntu /mnt/boot/efi/EFI/Boot    renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
 	
 	chroot /mnt                                           changement du root directory en /mnt
 	update-grub                                           création du fichier /boot/grub/grub.cfg
 	
+Si Linux est installé seul , l'installation est terminée
+
+	Enlever la clé et redémarrer le PC
+        
+Si linux est installé avec Windows , continuer au point 3
+	
+## 3 : Modifier grub.cfg pour prendre en compte Windows
+
 Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
 	Titre : Boot Manager
@@ -99,8 +109,6 @@ Sélectionner 2 et valider , le PC démarre sur Linux
 ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Manager existe il est toujours en premier
 
 Actuellement , il faut passer par F12 pour démarrer Linux
-
-## Modifier Linux pour activer le démarrage avec grub en dual-boot 
 
 	sudo su
         update-grub                                             pour la prise en compte de Windows par os-prober
@@ -118,7 +126,9 @@ Actuellement , il faut passer par F12 pour démarrer Linux
 	
 	escape :x!                                              Sauvegarder et quitter le fichier dans vi
 
-grub retrouve alors le chemin pour démarrer Windows 10
+grub retrouve alors le chemin pour démarrer Windows 10 , l'installation est terminée , redémarrer le PC
+
+## Affichage des nouvelles configurations
 
 Au démarrage en appuyant sur F2
 
@@ -131,7 +141,7 @@ Au démarrage en appuyant sur F12
 	
 Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée dans le BIOS , le PC démarre sur Linux Grub
 
-Linux devient le premier Boot dans le BIOS
+Linux devient le premier Boot dans le BIOS et Windows Boot Manager disparait
 
 	efibootmgr -v
 	BootCurrent: 0000 seconds
@@ -141,8 +151,6 @@ Linux devient le premier Boot dans le BIOS
 	Boot2002\* EFI DVD/CDROM	RC
 	Boot2003\* EFI Network	 RC
 	
-
-
 ## Mise à jour de Windows
 
 Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
@@ -153,7 +161,6 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	sudo su
 	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi/EFI
-	ll
 	si les répertoires MS et Microsoft existent , passer la comme suivante
 	mv MS MS.old
 	mv Microsoft MS
