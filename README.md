@@ -5,6 +5,7 @@
 	Auteur  : facila@gmx.fr
 
 Installation testée avec Linux Mint 19.1 et 19.3
+
 Cette procèdure ne marche pas avec Linux Mint 20.0 , l'ACER aspire ES17 ne boot pas sur la clè usb dans cette version
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
@@ -28,21 +29,22 @@ ACER n'autorise que le Boot Mode : [UEFI] avec 2 valeurs par défaut ( peut êtr
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
 
-Linux Mint installe dans la partition EFI , par exemple /dev/sda1
+Linux Mint installe le fichier suivant dans la partition EFI , par exemple /dev/sda1
 
-	/EFI/ubuntu/shimx64.efi ou /EFI/ubuntu/grubx64.efi
+	/EFI/ubuntu/grubx64.efi
 
-Le fichier de Linux n'est donc pas reconnu par le BIOS de l'ACER
+Le fichier de Linux n'est donc pas reconnu par le BIOS de l'ACER , il faut donc :
 
-Il faut donc copier le fichier créé par Linux Mint en /EFI/Boot/grubx64.efi
-
-Et si windows est installé , déplacer le fichier /EFI/Microsoft/Boot/bootmgfw.efi dans un autre répertoire
+	- réinstaller grub
+	- renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
+	- si windows est installé , renommer le répertoire /EFI/Microsoft en /EFI/MS
+	- modifier grub.cfg pour prendre en compte /EFI/MS
 
 ## Configuration du BIOS de l'ACER :
 
 Appuyer sur F2 au démarrage pour entrer dans le BIOS
 
-	Titre       : InsideH20 Setup Utility : Rev 5.0
+	Titre       : InsydeH20 Setup Utility : Rev 5.0
 	Information : System BIOS Version     : 1.03 à 1.19
 	Main        : F12 Boot Menu           : [Enabled]
 	Security    : Supervisor Password Is  : Set	mettre un password pour pouvoir modifier Secure Boot
@@ -63,17 +65,17 @@ Je vous conseille ensuite de garder cette clé qui pourra servir en cas de probl
 
 Exécuter l'installation de Linux
 
-Juste avant la fin de l'installation , le PC se plante
+Juste avant la fin de l'installation sur grub2 , le PC se plante
 
-L'installation de grub par Linux s'est quand même exécutée , mais l'écriture dans le BIOS n'étant pas permise le PC se plante
+L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne s'est pas bien terminée
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
 	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
 	sudo su
-	fdisk -l                                                noter le nom de la partition EFI
-	mkdir /boot/efi
-	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
+	fdisk -l                                                noter le nom de la partition EFI et de la partition root de Linux
+	mount /dev/sda5 /mnt    				si /dev/sda5 est la root de Linux
+	mount /dev/sda1 /mnt/boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi
 	mkdir EFI/Boot
 	cp EFI/ubuntu/shimx64.efi EFI/Boot/grubx64.efi		si shimx64.efi est le fichier installé par Linux
