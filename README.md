@@ -6,7 +6,7 @@
 
 Installation testée avec Linux Mint 19.1 et 19.3
 
-Cette procèdure ne marche pas avec Linux Mint 20.0 , l'ACER aspire ES17 ne boot pas sur la clè usb dans cette version
+Cette procèdure ne marche pas avec Linux Mint 20.0 , l'ACER aspire ES17 ne boot pas sur la clé usb dans cette version
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
 
@@ -35,7 +35,7 @@ Linux Mint installe le fichier suivant dans la partition EFI , par exemple /dev/
 
 Le fichier de Linux n'est donc pas reconnu par le BIOS de l'ACER , il faut donc :
 
-	- réinstaller grub
+	- réinstaller grub avec l'option --no-nvram qui se fera sans essayer d'écrire dans le BIOS
 	- renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
 	- si windows est installé , renommer le répertoire /EFI/Microsoft en /EFI/MS
 	- modifier grub.cfg pour prendre en compte /EFI/MS
@@ -67,18 +67,26 @@ Exécuter l'installation de Linux
 
 Juste avant la fin de l'installation sur grub2 , le PC se plante
 
-L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne s'est pas bien terminée
+L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne se termine pas bien
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
-	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
+	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
 	sudo su
 	fdisk -l                                                noter le nom de la partition EFI et de la partition root de Linux
+	
 	mount /dev/sda5 /mnt    				si /dev/sda5 est la root de Linux
 	mount /dev/sda1 /mnt/boot/efi				si /dev/sda1 est la partition EFI
-	cd /boot/efi
-	mkdir EFI/Boot
-	cp EFI/ubuntu/shimx64.efi EFI/Boot/grubx64.efi		si shimx64.efi est le fichier installé par Linux
+	for i in /dev /dev/pts /proc /sys ; do mount -B $i /mnt$i ; done
+	
+	rm -rf /mnt/boot/efi/EFI/ubuntu
+	apt-get install --reinstall grub-efi-amd64
+	grub-install --no-nvram --root-directory=/mnt           création du fichier grubx64.efi
+	rm -rf /mnt/boot/efi/EFI/BOOT
+	mv /mnt/boot/efi/EFI/ubuntu /mnt/boot/efi/EFI/Boot
+	
+	chroot /mnt                                             changement du root directory en /mnt
+        update-grub                                             création du fichier /boot/grub/grub.cfg
 	
 Enlever la clé USB et redémarrer le PC en appuyant sur F12
 
@@ -98,15 +106,7 @@ Actuellement , il faut passer par F12 pour démarrer Linux
 	cd /boot/efi/EFI
 	mv Microsoft MS						MS ou un autre nom de votre choix
 
-Windows Boot Manager n'est alors plus vu par le BIOS
 
-	efibootmgr -v
-	BootCurrent: 0000 seconds
-	BootOrder: 0000,2001,2002,2003
-	Boot0000\* Linux HD(1,GPT,74e4d112-02f8-41bc-868e-d063f8d9,0x800,0x32000)/File(\EFI\Boot\grubx64.efi)RC
-	Boot2001\* EFI USB Device	RC
-	Boot2002\* EFI DVD/CDROM	RC
-	Boot2003\* EFI Network	 RC
 
 Au démarrage en appuyant sur F2
 
@@ -117,8 +117,18 @@ Au démarrage en appuyant sur F12
 	Titre : Boot Manager
 	1. Linux
 	
-Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée dans le BIOS , le PC démarre sur Linux Grub	
+Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée dans le BIOS , le PC démarre sur Linux Grub
 
+Linux devient le premier Boot dans le BIOS
+
+	efibootmgr -v
+	BootCurrent: 0000 seconds
+	BootOrder: 0000,2001,2002,2003
+	Boot0000\* Linux HD(1,GPT,74e4d112-02f8-41bc-868e-d063f8d9,0x800,0x32000)/File(\EFI\Boot\grubx64.efi)RC
+	Boot2001\* EFI USB Device	RC
+	Boot2002\* EFI DVD/CDROM	RC
+	Boot2003\* EFI Network	 RC
+	
 ## Modifier Linux pour réactiver Windows 10 dans grub
 
 Modifier le fichier grub.cfg
