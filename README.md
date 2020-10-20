@@ -6,7 +6,7 @@
 
 Installation testée avec Linux Mint 19.1 et 19.3
 
-Cette procèdure ne marche pas avec Linux Mint 20 , l'ACER aspire ES17 ne boot pas sur la clé usb dans cette version
+Cette procèdure ne marche pas avec Linux Mint 20 , l'ACER Aspire ES17 ne boot pas sur la clé usb dans cette version
 
 Je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
 
