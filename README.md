@@ -75,7 +75,7 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	sudo su
 	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
 	
-	mount /dev/sda5 /mnt    		              si /dev/sda5 est la root de Linux
+	mount /dev/sda5 /mnt    		              si /dev/sda5 est la partition root de Linux
 	mount /dev/sda1 /mnt/boot/efi		    	      si /dev/sda1 est la partition EFI
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /mnt$i ; done
 	
