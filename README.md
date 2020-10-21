@@ -76,6 +76,7 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	sudo su
 	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
 	
+	
 	mount /dev/sda5 /mnt    		              si /dev/sda5 est la partition root de Linux
 	mount /dev/sda1 /mnt/boot/efi		    	      si /dev/sda1 est la partition EFI
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /mnt$i ; done
@@ -84,10 +85,10 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	apt-get install --reinstall grub-efi-amd64
 	grub-install --no-nvram --root-directory=/mnt         création du fichier grubx64.efi , --no-nvram ne fait pas l'installation dans le BIOS
 	
-	rm -rf /mnt/boot/efi/EFI/BOOT
-	mv /mnt/boot/efi/EFI/ubuntu /mnt/boot/efi/EFI/Boot    renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
-	
 	chroot /mnt                                           changement du root directory en /mnt
+	rm -rf /boot/efi/EFI/BOOT
+	mv /boot/efi/EFI/ubuntu /boot/efi/EFI/Boot            renommer le répertoire créé par Linux Mint /EFI/ubuntu en /EFI/Boot
+
 	update-grub                                           création du fichier /boot/grub/grub.cfg
 	
 Si Linux est installé seul , l'installation est terminée
