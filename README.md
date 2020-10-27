@@ -168,13 +168,3 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	mv Microsoft MS
 	
 Enlever la clé USB et redémarrer
-
-## Comment faire autrement ?
-
-Est-ce que quelqu'un à une autre solution ?
-
-Existe-t-il une version de BIOS compatible ACER et Linux Mint ?
-
-ACER peut-il changer de BIOS et faire comme les autres constructeurs ?
-
-Linux Mint peut-il prendre en compte ce cas dans sa procédure d'installation ?
