@@ -4,7 +4,7 @@
 	Version : 3.00
 	Auteur  : facila@gmx.fr
 
-J'explique comment installer Linux si comme moi vous avez un ACER et que vous rencontrerez les problèmes suivants :
+J'explique comment installer Linux si comme moi vous avez un ACER et que vous rencontrez les problèmes suivants :
 
 - plantage à la fin de l'installation de linux
 - plantage à l'installation ou la réparation de grub
