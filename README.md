@@ -39,11 +39,10 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 
 ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
 
-ACER n'autorise que le Boot Mode : [UEFI] avec des valeurs prédéfinies , /EFI/ubuntu n'est pas autorisé
+ACER n'autorise que le Boot Mode : [UEFI] avec des valeurs prédéfinies
 
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
-	Default                 : /EFI/BOOT/BOOTX64.EFI
 
 Linux Mint installe le fichier suivant dans la partition EFI
 
