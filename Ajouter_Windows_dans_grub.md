@@ -6,9 +6,9 @@
 
 ACER ne permet pas de changer l'ordre de Boot entre Windows et Linux dans le BIOS
 
-si Windows Boot Manager existe il est toujours démarré en premier
+Si Windows Boot Manager existe il est toujours démarré en premier
 
-il faut passer par F12 pour démarrer Linux
+Il faut passer par F12 pour démarrer Linux
 
 Redémarrer le PC en appuyant sur F12
 
