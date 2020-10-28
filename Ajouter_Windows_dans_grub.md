@@ -54,7 +54,7 @@ Linux devient le premier Boot dans le BIOS et Windows Boot Manager disparait
 	Boot0000\* Linux HD(1,GPT,74e4d112-02f8-41bc-868e-d063f8d9,0x800,0x32000)/File(\EFI\Boot\grubx64.efi)RC
 	Boot2001\* EFI USB Device	RC
 	Boot2002\* EFI DVD/CDROM	RC
-	Boot2003\* EFI Network	 RC
+	Boot2003\* EFI Network	        RC
 
 ## Mises à jour de Windows
 
