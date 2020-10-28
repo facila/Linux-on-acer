@@ -18,7 +18,7 @@ Redémarrer le PC en appuyant sur F12
 
 Sélectionner 2 et valider , le PC démarre sur Linux
 
-Passer les commandes suivantes pour ajouter Windows dans grub
+Pour ajouter Windows dans grub , passer les commandes suivantes 
 
 	sudo su
 	update-grub                                               pour la prise en compte de Windows par os-prober
