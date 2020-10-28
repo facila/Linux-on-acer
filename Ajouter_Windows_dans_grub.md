@@ -1,4 +1,7 @@
 ## Ajouter Windows dans grub
+	Date    : 28/10/2020
+	Version : 3.00
+	Auteur  : facila@gmx.fr
 
 	ACER ne permet pas de changer l'ordre de Boot entre Windows et Linux dans le BIOS
 	si Windows Boot Manager existe il est toujours démarré en premier
