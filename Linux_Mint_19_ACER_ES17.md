@@ -12,9 +12,9 @@ Je vous conseille ensuite de garder cette clé qui pourra servir en cas de probl
 
 Exécuter l'installation de Linux
 
-Juste avant la fin de l'installation sur grub2 , le PC se plante
+Juste avant la fin de l'installation sur grub2 , le PC se bloque
 
-L'écriture dans le BIOS n'étant pas permise le PC se plante et l'installation de grub par Linux ne se termine pas bien
+L'écriture dans le BIOS n'étant pas permise le PC se bloque et l'installation de grub par Linux ne se termine pas bien
 
 ## 2 : Réinstaller grub manuellement à partir de la clé USB
 
@@ -23,7 +23,6 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	setxkbmap fr                                          si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
 	sudo su
 	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
-	
 	
 	mount /dev/sda5 /mnt    		              si /dev/sda5 est la partition root de Linux
 	mount /dev/sda1 /mnt/boot/efi		    	      si /dev/sda1 est la partition EFI
