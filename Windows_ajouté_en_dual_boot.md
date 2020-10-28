@@ -1,43 +1,48 @@
-3 : Démarrer Linux et modifier grub.cfg pour prendre en compte Windows
+## Ajouter Windows dans grub
 
-Enlever la clé USB et redémarrer le PC en appuyant sur F12
+	ACER ne permet pas de changer l'ordre de Boot entre Windows et Linux dans le BIOS
+	si Windows Boot Manager existe il est toujours démarré en premier
+	il faut passer par F12 pour démarrer Linux
 
-Titre : Boot Manager
-1. Windows Boot Manager
-2. Linux
+Redémarrer le PC en appuyant sur F12
+
+	Titre : Boot Manager
+	1. Windows Boot Manager
+	2. Linux
 
 Sélectionner 2 et valider , le PC démarre sur Linux
 
-ACER ne permet pas de changer l'ordre de Boot dans le BIOS , si Windows Boot Manager existe il est toujours en premier
-
-Actuellement , il faut passer par F12 pour démarrer Linux
+Passer les commandes suivantes pour ajouter Windows dans grub
 
 sudo su
 update-grub                                               pour la prise en compte de Windows par os-prober
-mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	  MS ou un autre nom de votre choix
+mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	  pour supprimer Windows Boot Manager du menu de Boot
 
 vi /boot/grub/grub.cfg                                    remplacer les entrées suivantes
 	menuentry 'Windows Boot Manager (on /dev/sda1)'   ->	menuentry 'Windows 10'
 	chainloader /EFI/Microsoft/Boot/bootmgfw.efi	  ->	chainloader /EFI/MS/Boot/bootmgfw.efi
 
-Les mises à jour de Linux peuvent recréer le bloc Windows d'origine
-Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober à la section 40_custom
+Avec le nom MS , chaque modification de grub supprimera le bloc Windows 10
+Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober dans le fichier /etc/grub.d/40_custom
 Selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/30_os-prober ###
-Coller le bloc dans la section : ### BEGIN /etc/grub.d/40_custom ###
+Coller dans le fichier /etc/grub.d/40_custom
 
-escape :x!                                                sauvegarder et quitter le fichier dans vi
+escape :x!                                                sauvegarder et quitter les fichiers dans vi
+
+update-grub                                               pour la prise en compte du fichier /etc/grub.d/40_custom
 
 grub retrouve alors le chemin pour démarrer Windows 10 , l'installation est terminée , redémarrer le PC
-Affichage des nouvelles configurations
+
+## Affichage des nouvelles configurations
 
 Au démarrage en appuyant sur F2
 
-Boot        : Boot priority order     : 1. Linux
+	Boot        : Boot priority order     : 1. Linux
 
 Au démarrage en appuyant sur F12
 
-Titre : Boot Manager
-1. Linux
+	Titre : Boot Manager
+	1. Linux
 
 Il n'y a plus besoin de faire F12 pour démarrer , comme il n'y a qu'une entrée dans le BIOS , le PC démarre sur Linux Grub
 
@@ -51,7 +56,7 @@ Boot2001\* EFI USB Device	RC
 Boot2002\* EFI DVD/CDROM	RC
 Boot2003\* EFI Network	 RC
 
-Mise à jour de Windows
+## Mises à jour de Windows
 
 Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
 
@@ -65,4 +70,4 @@ si les répertoires MS et Microsoft existent , passer les commandes suivantes
 mv MS MS.old
 mv Microsoft MS
 
-Enlever la clé USB et redémarrer
+Enlever la clé USB , redémarrer et refaire la procédure pour ajouter Windows dans grub
