@@ -30,8 +30,11 @@ Pour ajouter Windows dans grub , passer les commandes suivantes
 
 	Avec le nom MS , chaque modification de grub supprimera le bloc Windows 10
 	Il faut donc déplacer le bloc de Windows 10 de la section 30_os-prober dans le fichier /etc/grub.d/40_custom
+	
 	Selectionner et couper le bloc : menuentry 'Windows 10' de la section ### BEGIN /etc/grub.d/30_os-prober ###
-	Coller dans le fichier /etc/grub.d/40_custom
+	
+	vi /etc/grub.d/40_custom
+		Coller dans le fichier 
 
 	escape :x!                                                sauvegarder et quitter les fichiers dans vi
 
