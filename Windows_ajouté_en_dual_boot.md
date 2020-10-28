@@ -56,7 +56,7 @@ Boot2001\* EFI USB Device	RC
 Boot2002\* EFI DVD/CDROM	RC
 Boot2003\* EFI Network	 RC
 
-## Mises à jour de Windows
+## Mises à jour de Windows
 
 Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
 
