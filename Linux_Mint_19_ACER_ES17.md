@@ -30,9 +30,10 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	
 	rm -rf /mnt/boot/efi/EFI/ubuntu
 	apt-get install --reinstall grub-efi-amd64
-	grub-install --no-nvram --root-directory=/mnt         création du fichier grubx64.efi , --no-nvram ne fait pas l'installation dans le BIOS
 	
 	chroot /mnt                                           changement du root directory en /mnt
+	grub-install --no-nvram                               création du fichier grubx64.efi , --no-nvram ne fait pas l'installation dans le BIOS
+		
 	cd /boot/efi/EFI
 	rm -rf BOOT
 	mkdir Boot
