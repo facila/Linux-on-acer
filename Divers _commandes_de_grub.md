@@ -1,4 +1,4 @@
-## Divers commandes de grub
+## Divers commandes de grub
 
 Modifier une option au démarrage
 
