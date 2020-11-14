@@ -15,12 +15,14 @@ Pour booter sur la clè USB Linux Mint 20 , il faut ajouter acpi=off dans les op
 	Sur le menu de grub , taper e pour edit
   	Ajouter acpi=off aprés /casper/vmlinux ( attention au clavier qwerty a=q )
 	Appuyer sur F10
+	Malheureusement , avec acpi=off le PC ne s'éteindra plus tout seul
+	Il devient obligatoire d'appuyer sur arret/marche pour etaindre le PC
 	
 Exécuter l'installation de Linux
 
-    Juste avant la fin , l'installation s'arrête l'écriture dans le BIOS n'étant pas permise par le PC
+	Juste avant la fin , l'installation s'arrête l'écriture dans le BIOS n'étant pas permise par le PC
 	L'exécution de grub-install a échoué  ->  cliquer sur KO
-    Le programme d'installation a planté  ->  cliquer sur Fermer 
+	Le programme d'installation a planté  ->  cliquer sur Fermer 
 	Installation terminée                 ->  cliquer sur Continuer à tester
 
 Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le PC
