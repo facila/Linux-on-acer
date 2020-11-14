@@ -34,7 +34,7 @@ Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le P
 
 	chroot /target                    changement du root directory en /target
 	cd /boot/efi/EFI
-	cp ubuntu/grubx64.efi Boot
+	cp ubuntu/grubx64.efi BOOT
 
 	vi /etc/default/grub
 	ajouter acpi=off à la variable GRUB_CMDLINE_LINUX_DEFAULT    
