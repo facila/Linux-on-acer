@@ -25,5 +25,6 @@ Vérifier les variables de grub
   
     en cas de problème , il est possible de modifier les variables et de d'exécuter un démarrage
     pour démarrer , taper :
+    grub> set "variable"="valeur"
     grub> insmod normal
     grub> normal
