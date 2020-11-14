@@ -29,7 +29,7 @@ Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le P
 
 	sudo su
 
-    Les partitions du PC sont déjà montées sur /target
+	Les partitions du PC /dev/sd.. sont déjà montées sur /target
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /target$i ; done
 
 	chroot /target                    changement du root directory en /target
@@ -37,7 +37,8 @@ Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le P
 	cp ubuntu/grubx64.efi BOOT
 
 	vi /etc/default/grub
-	ajouter acpi=off à la variable GRUB_CMDLINE_LINUX_DEFAULT    
+		ajouter acpi=off à la variable GRUB_CMDLINE_LINUX_DEFAULT  
+	escape :x!                        sauvegarder et quitter le fichier dans vi
 
 	update-grub                       création du fichier /boot/grub/grub.cfg
 
