@@ -52,3 +52,20 @@ Si Linux est installé seul , l'installation est terminée
 Si Linux est installé avec Windows
 
 	Appliquer la procédure : Ajouter Windows dans grub
+	
+## 3 : Mise à jours de Linux
+
+Une fois installé , de nombreuses mises à jour sont faites lors d'une connexion à internet
+
+La mise à jour de grub finie à nouveau en echec , à priori sans conséquences sur l'installation
+
+Par contre , l'arrêt du PC fonctionne à nouveau sans avoir besoin d'appuyer sur marche/arrêt
+
+Il est donc possible d'enlever acpi=off dans grub
+
+	vi /etc/default/grub
+		supprimer acpi=off de la variable GRUB_CMDLINE_LINUX_DEFAULT  
+	escape :x!                        sauvegarder et quitter le fichier dans vi
+
+	update-grub                       création du fichier /boot/grub/grub.cfg
+
