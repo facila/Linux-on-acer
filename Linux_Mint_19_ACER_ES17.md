@@ -31,15 +31,9 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 	apt-get install --reinstall grub-efi-amd64
 	
 	chroot /mnt                                           changement du root directory en /mnt
-	cd /boot/efi/EFI
-	rm -rf ubuntu
-	
 	grub-install --no-nvram                               création du fichier grubx64.efi , --no-nvram ne fait pas l'installation dans le BIOS
-	
-	rm -rf BOOT
-	mkdir Boot
-	cp ubuntu/grubx64.efi Boot
-
+	cd /boot/efi/EFI
+	cp ubuntu/grubx64.efi BOOT
 	update-grub                                           création du fichier /boot/grub/grub.cfg
 	
 Si Linux est installé seul , l'installation est terminée
