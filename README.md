@@ -48,6 +48,9 @@ De plus , ACER n'autorise que le Boot Mode : [UEFI] avec des valeurs prédéfini
 
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
+	
+	La partition pour UEFI est en FAT32 , les majuscules/minuscules n'ont pas d'importance dans le nom du fichier
+	Linux installe le répertoire /EFI/BOOT qui fonctionne de la même manière que /EFI/Boot
 
 Linux Mint installe le fichier suivant dans la partition EFI
 
