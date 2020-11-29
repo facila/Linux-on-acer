@@ -1,4 +1,4 @@
-## Configuration du BOOT de l'ACER après l'installation :
+## Configuration du BOOT de l'ACER après l'installation
 
 Au démarrage en appuyant sur F2
 
