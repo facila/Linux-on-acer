@@ -1,4 +1,4 @@
-## Configuration du BOOT de l'ACER avant l'installation :
+## Configuration du BOOT de l'ACER avant l'installation
 
 Appuyer sur F12 au démarrage pour afficher le menu de Boot
 
