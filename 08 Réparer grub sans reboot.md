@@ -1,14 +1,6 @@
 ## Installer Linux Mint 20 sur un ACER Aspire ES17 ES1-732
 
-	Date    : 17/11/2020
-	Version : 1.01
-	Auteur  : facila@gmx.fr
-
 ## 1 : Installer Linux Mint à partir d'une clé USB bootable
-
-Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
-
-Je vous conseille ensuite de garder cette clé qui pourra servir en cas de problème
 
 Pour booter sur la clè USB Linux Mint 20 , il faut ajouter acpi=off dans les options de grub
 
@@ -27,7 +19,7 @@ Exécuter l'installation de Linux
 
 Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le PC
 
-## 2 : Corriger l'installation de grub à partir d'un terminal
+## 2 : Réparer l'installation de grub à partir d'un terminal
 
 	sudo su
 
