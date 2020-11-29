@@ -1,5 +1,10 @@
 ## Terminer l'installation
 
+Si vous avez ajouter acpi=off pour démarrer
+
+	voir "05 grub option acpi"
+	Ajouter acpi=off dans grub.cfg
+
 Si Linux est installé seul , l'installation est terminée
 
 	Enlever la clé USB et redémarrer le PC
