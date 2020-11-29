@@ -1,4 +1,4 @@
-## Configuration du BIOS de l'ACER avant l'installation :
+## Configuration du BIOS de l'ACER avant l'installation
 
 Appuyer sur F2 au démarrage pour entrer dans le BIOS
 
