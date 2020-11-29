@@ -31,6 +31,6 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 	l'écriture dans le BIOS n'étant pas permise
 	l'installation de grub échoue
 	
-	Si le PC ne se plante pas , exécuter la procédure : "05 Réparer grub sans reboot"
+	Si le PC ne se plante pas , exécuter la procédure : "06 Réparer grub sans reboot"
 	
-	Si le PC se plante , exécuter la procédure : "06 Réparer grub avec reboot"
+	Si le PC se plante , exécuter la procédure : "07 Réparer grub avec reboot"
