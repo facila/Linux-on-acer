@@ -1,6 +1,6 @@
 ## Mise à jour de Linux
 
-Lors de mises à jour de Linux , il est possible que l'installation de grub échoue à nouveau
+Lors des mises à jour de Linux , il est possible que l'installation de grub échoue à nouveau
 
 Si le PC démarre sur grub> , essayer les commandes suivantes
 
