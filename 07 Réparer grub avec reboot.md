@@ -1,8 +1,10 @@
-# Installer Linux Mint 19 sur un ACER Aspire ES17 ES1-732
-       	
-## Réinstaller grub manuellement à partir de la clé USB
+## Réparer grub avec reboot
 
-Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
+Si le PC se plante , il est obligatoire de le redémarrer sur la clé USB
+
+Cas rencontré avec Linux Mint 19.3
+
+## Lancer un terminal et exécuter les commandes suivantes
 
 	setxkbmap fr                                          si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
 	sudo su
@@ -26,4 +28,4 @@ Si Linux est installé seul , l'installation est terminée
         
 Si Linux est installé avec Windows
 
-  	Appliquer la procédure : Ajouter Windows dans grub
+  	Appliquer la procédure : "08 Ajouter Windows dans grub"
