@@ -2,9 +2,8 @@
 
 Appuyer sur F2 au démarrage pour entrer dans le BIOS
 
-Menu Security : mettre un "Supervisor Password" pour pouvoir modifier Secure Boot
-
-Menu Boot     : mettre "Secure Boot" = Disabled
+	Menu Security : mettre un "Supervisor Password" pour pouvoir modifier Secure Boot
+	Menu Boot     : mettre "Secure Boot" = Disabled
 
 	Titre       : InsydeH20 Setup Utility : Rev 5.0
 	Information : System BIOS Version     : 1.03 à 1.19
