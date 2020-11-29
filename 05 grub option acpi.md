@@ -14,6 +14,8 @@ Il faut ajouter acpi=off dans les options de grub
 
 ## Ajouter acpi=off dans grub.cfg
 
+Pour ne pas avoir à ajouter acpi=off en mode édit à chaque démarrage
+
 	vi /etc/default/grub
 		ajouter acpi=off à la variable GRUB_CMDLINE_LINUX_DEFAULT  
 	escape :x!                        sauvegarder et quitter le fichier dans vi
