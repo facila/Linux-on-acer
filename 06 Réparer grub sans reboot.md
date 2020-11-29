@@ -29,4 +29,4 @@ Si Linux est installé seul , l'installation est terminée
 
 Si Linux est installé avec Windows
 
-	Appliquer la procédure : 08 Ajouter Windows dans grub
+	Appliquer la procédure : "08 Ajouter Windows dans grub"
