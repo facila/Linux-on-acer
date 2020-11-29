@@ -13,11 +13,3 @@ Menu Boot     : mettre "Secure Boot" = Disabled
 	Boot        : Boot Mode               : [UEFI]
 	Boot        : Secure Boot             : [Disabled]
 	Boot        : Boot priority order     : 1. Windows Boot Manager
-
-## Configuration du BOOT de l'ACER avant l'installation :
-
-Appuyer sur F12 au démarrage pour afficher le menu de Boot
-
-	Titre : Boot Manager
-	1. Windows Boot Manager
-	
