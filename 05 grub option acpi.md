@@ -37,4 +37,4 @@ Il est donc possible de supprimer acpi=off dans grub
 Malheureusement , l'inverse est également possible 
 
 	Le PC peut ne plus démarrer suite à des mises à jour
-	Il faut donc recommencer l'ajout de l'aoption acpi=off
+	Il faut donc recommencer l'ajout de l'option acpi=off
