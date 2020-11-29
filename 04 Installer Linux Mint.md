@@ -10,8 +10,9 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 		je ne détaille pas non plus le fonctionnement général de EFI
 		le problème n'est pas là , tous les tutos disponibles sur internet le font trés bien
 
-## Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
+## Créer une clé USB bootable sur Linux Mint
 
+	voir la procédure sur internet
 	il y a plusieurs méthodes pour créer la clé USB bootable
 	la suivante , avec mkusb , permet en plus de pouvoir ecrire ensuite sur la clé
 	cela peut être interessant pour sauvegarder des fichiers d'installation et les réutiliser en copier/coller
