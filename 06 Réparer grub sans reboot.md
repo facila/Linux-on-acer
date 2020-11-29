@@ -1,6 +1,6 @@
 ## Reparer grub sans reboot
 
-Si l'installation de grub echoue , mais que le PC ne se plante pas , il est possible de réparer grub sans rebooter
+Si l'installation de grub échoue , mais que le PC ne se plante pas , il est possible de réparer grub sans rebooter
 
 Cas rencontré avec Linux Mint 20
 
