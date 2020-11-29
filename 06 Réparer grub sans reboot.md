@@ -25,7 +25,7 @@ Cas rencontré avec Linux Mint 20
 Si Linux est installé seul , l'installation est terminée
 
 	Enlever la clé USB et redémarrer le PC
-	Si acpi=off , Il faut faire un appui long sur le bouton marche/arret pour arreter le PC
+	Si acpi=off , faire un appui long sur le bouton marche/arret pour arrêter le PC
 
 Si Linux est installé avec Windows
 
