@@ -9,7 +9,7 @@ Si le PC démarre sur grub> , essayer les commandes suivantes
     lancer un terminal
     sudo su
     cd /boot/efi/EFI
-    cp ubuntu/grubx34.efi BOOT
+    cp ubuntu/grubx64.efi BOOT
     update-grub
     
 Si la procédure précédente ne marche pas
