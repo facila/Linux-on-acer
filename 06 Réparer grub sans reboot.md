@@ -22,4 +22,4 @@ Cas rencontré avec Linux Mint 20
 
 	update-grub                       création du fichier /boot/grub/grub.cfg
 
-Faire "08 Terminer l'installation"
+## Faire "08 Terminer l'installation"
