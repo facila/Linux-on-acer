@@ -3,7 +3,7 @@
 Appuyer sur F12 au démarrage pour afficher le menu de Boot
 
 	Titre : Boot Manager
-    	1. Windows Boot Manager
+	1. Windows Boot Manager
 
 ## Configuration du BOOT de l'ACER après l'installation :
 
