@@ -1,9 +1,5 @@
 # Installer Linux Mint sur un ACER Aspire ES17 ES1-732
 
-	Date    : 28/11/2020
-	Version : 4.00
-	Auteur  : facila@gmx.fr
-
 J'explique comment installer Linux si comme moi vous avez un ACER et que vous rencontrez les problèmes suivants :
 
 - plantage à la fin de l'installation de linux
