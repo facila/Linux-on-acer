@@ -1,18 +1,6 @@
 # Installer Linux Mint 19 sur un ACER Aspire ES17 ES1-732
        	
-## 1 : Installer Linux Mint à partir d'une clé USB bootable
-
-Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
-
-Je vous conseille ensuite de garder cette clé qui pourra servir en cas de problème
-
-Exécuter l'installation de Linux
-
-Juste avant la fin de l'installation sur grub2 , le PC se bloque
-
-L'écriture dans le BIOS n'étant pas permise le PC se bloque et l'installation de grub par Linux ne se termine pas bien
-
-## 2 : Réinstaller grub manuellement à partir de la clé USB
+## Réinstaller grub manuellement à partir de la clé USB
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
