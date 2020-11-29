@@ -1,4 +1,4 @@
-## Pourquoi l'installation de linux ne marche-t-elle pas ?
+## Pourquoi l'installation de Linux Mint ne marche-t-elle pas ?
 
 ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot : [Disabled] , d'où les plantages
 
