@@ -4,7 +4,7 @@ Lors des mises à jour de Linux , il est possible que l'installation de grub éc
 
 Si le PC démarre sur grub> , essayer les commandes suivantes
 
-    grub> normal              -> le PC doit démarrer
+    grub> normal              -> le PC doit démarrer ( ajouter acpi=off si nécessaire )
     
     lancer un terminal
     sudo su
