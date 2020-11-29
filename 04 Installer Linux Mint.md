@@ -6,9 +6,9 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 - plantage à l'installation ou la réparation de grub
 - plantage sur la commande efibootmgr lorsque l'on essaye de modifier le BIOS
 
-	je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
-	je ne détaille pas non plus le fonctionnement général de EFI
-	le problème n'est pas là , tous les tutos disponibles sur internet le font trés bien
+		je ne détaille pas l'installation de Linux Mint : partition , clé bootable , ... 
+		je ne détaille pas non plus le fonctionnement général de EFI
+		le problème n'est pas là , tous les tutos disponibles sur internet le font trés bien
 
 ## Créer une clé USB bootable sur Linux Mint ( voir la procédure sur internet )
 
