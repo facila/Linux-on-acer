@@ -25,7 +25,7 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 
 	voir la procédure sur internet
 	
-	si le PC ne démarre pas sur la clé USB , voir "05 grup option acpi"
+	si le PC ne démarre pas sur la clé USB , voir "05 grub option acpi"
 	
 	juste avant la fin de l'installation sur grub2
 	l'écriture dans le BIOS n'étant pas permise
