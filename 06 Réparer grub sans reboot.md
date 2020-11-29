@@ -9,7 +9,7 @@ Cas rencontré avec Linux Mint 20
 	Le programme d'installation a planté  ->  cliquer sur Fermer 
 	Installation terminée                 ->  cliquer sur Continuer à tester
 
-## Lancer un terminal 
+## Lancer un terminal et exécuter les commandes suivantes
 
 	sudo su
 
@@ -25,7 +25,7 @@ Cas rencontré avec Linux Mint 20
 Si Linux est installé seul , l'installation est terminée
 
 	Enlever la clé USB et redémarrer le PC
-	Il faut faire un appui long sur le bouton marche/arret pour arreter le PC
+	Si acpi=off , Il faut faire un appui long sur le bouton marche/arret pour arreter le PC
 
 Si Linux est installé avec Windows
 
