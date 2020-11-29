@@ -27,6 +27,10 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 	
 	si le PC ne démarre pas sur la clé USB , voir "05 grub option acpi"
 	
-	juste avant la fin de l'installation sur grub2
+	juste avant la fin de l'installation
 	l'écriture dans le BIOS n'étant pas permise
-	l'installation se plante ou le PC se bloque
+	l'installation de grub échoue
+	
+	Si le PC ne se plante pas , exécuter la procédure : "05 Réparer grub sans reboot"
+	
+	Si le PC se plante , exécuter la procédure : "06 Réparer grub avec reboot"
