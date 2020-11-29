@@ -7,7 +7,7 @@ Appuyer sur F12 au démarrage pour afficher le menu de Boot
 
 ## Configuration du BOOT de l'ACER après l'installation :
 
-Si vous supprimez Windows , le BOOT n'aura plus qu'une entrée et démarera directement sur Linux grub
+Si vous supprimez Windows , le BOOT n'aura plus qu'une entrée et démmarera directement sur Linux grub
 
     Titre : Boot Manager
 	1. Linux
