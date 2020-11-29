@@ -1,7 +1,7 @@
 
 ## Si le PC ne démarre pas sur la clé USB bootable
 
-Problème rencontré pour booter sur la clè USB Linux Mint 20
+Problème rencontré pour booter sur la clé USB Linux Mint 20
 
 Il faut ajouter acpi=off dans les options de grub
 
