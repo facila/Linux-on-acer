@@ -1,8 +1,4 @@
 # Installer Linux Mint 19 sur un ACER Aspire ES17 ES1-732
-
-	Date    : 17/11/2020
-	Version : 3.01
-	Auteur  : facila@gmx.fr
        	
 ## 1 : Installer Linux Mint à partir d'une clé USB bootable
 
