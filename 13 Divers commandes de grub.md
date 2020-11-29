@@ -28,6 +28,3 @@ Vérifier les variables de grub
     grub> set "variable"="valeur"
     grub> insmod normal
     grub> normal
-
-
-s
