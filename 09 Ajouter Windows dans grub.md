@@ -42,3 +42,6 @@ Au démarrage en appuyant sur F12
 
 	Titre : Boot Manager
 	1. Linux
+	
+	
+s
