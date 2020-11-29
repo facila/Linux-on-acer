@@ -1,15 +1,15 @@
-## Installer Linux Mint 20 sur un ACER Aspire ES17 ES1-732
+## Reparer grub sans reboot
 
-Exécuter l'installation de Linux
+Si l'installation de grub echoue , mais que le PC ne se plante pas , il est possible de réparer grub sans rebooter
+
+Cas rencontré avec Linux Mint 20
 
 	Juste avant la fin , l'installation s'arrête l'écriture dans le BIOS n'étant pas permise par le PC
 	L'exécution de grub-install a échoué  ->  cliquer sur KO
 	Le programme d'installation a planté  ->  cliquer sur Fermer 
 	Installation terminée                 ->  cliquer sur Continuer à tester
 
-Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le PC
-
-## 2 : Réparer l'installation de grub à partir d'un terminal
+## Lancer un terminal 
 
 	sudo su
 
@@ -20,10 +20,6 @@ Contrairement à Linux Mint 19 , il est possible de continuer sans rebooter le P
 	cd /boot/efi/EFI
 	cp ubuntu/grubx64.efi BOOT
 
-	vi /etc/default/grub
-		ajouter acpi=off à la variable GRUB_CMDLINE_LINUX_DEFAULT  
-	escape :x!                        sauvegarder et quitter le fichier dans vi
-
 	update-grub                       création du fichier /boot/grub/grub.cfg
 
 Si Linux est installé seul , l'installation est terminée
@@ -33,21 +29,4 @@ Si Linux est installé seul , l'installation est terminée
 
 Si Linux est installé avec Windows
 
-	Appliquer la procédure : Ajouter Windows dans grub
-	
-## 3 : Mise à jours de Linux
-
-Une fois installé , de nombreuses mises à jour sont faites lors d'une connexion à internet
-
-La mise à jour de grub finie à nouveau en echec , à priori sans conséquences sur l'installation
-
-Par contre , l'arrêt du PC fonctionne à nouveau sans avoir besoin d'appuyer sur marche/arrêt
-
-Il est donc possible d'enlever acpi=off dans grub
-
-	vi /etc/default/grub
-		supprimer acpi=off de la variable GRUB_CMDLINE_LINUX_DEFAULT  
-	escape :x!                        sauvegarder et quitter le fichier dans vi
-
-	update-grub                       création du fichier /boot/grub/grub.cfg
-
+	Appliquer la procédure : 08 Ajouter Windows dans grub
