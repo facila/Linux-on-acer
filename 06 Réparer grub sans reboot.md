@@ -1,4 +1,4 @@
-## Reparer grub sans reboot
+## Réparer grub sans reboot
 
 Si l'installation de grub échoue , mais que le PC ne se plante pas , il est possible de réparer grub sans rebooter
 
