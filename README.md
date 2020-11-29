@@ -6,6 +6,6 @@ Installer Linux Mint sur un ACER Aspire ES17 ES1-732
 	Version : 4.00
 	Auteur  : facila@gmx.f
 
-12 chapitres permettant de corriger l'installation de Linux Mint
+13 chapitres permettant de corriger l'installation de Linux Mint
 
 En cours de mise à jour
