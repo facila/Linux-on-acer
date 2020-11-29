@@ -7,14 +7,16 @@ De plus , ACER n'autorise que le Boot Mode : [UEFI] avec des valeurs prédéfini
 	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
 	Linux			: /EFI/Boot/grubx64.efi
 	
-	La partition pour UEFI est en FAT32 , les majuscules/minuscules n'ont pas d'importance dans le nom du fichier
-	Linux installe le répertoire /EFI/BOOT qui fonctionne de la même manière que /EFI/Boot
-
 Linux Mint installe le fichier suivant dans la partition EFI
 
 	/EFI/ubuntu/grubx64.efi
 
 Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , d'où le redémarrage impossible
+
+Répertoire /EFI/Boot
+
+	La partition pour UEFI est en FAT32 , les majuscules/minuscules n'ont pas d'importance dans le nom du fichier
+	Linux installe le répertoire /EFI/BOOT qui fonctionne de la même manière que /EFI/Boot
 
 L'installation de Linux est une vraie galère , pour ne plus avoir ce genre de problème , il faudrait
 
