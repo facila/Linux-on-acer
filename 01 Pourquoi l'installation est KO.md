@@ -15,3 +15,9 @@ Linux Mint installe le fichier suivant dans la partition EFI
 	/EFI/ubuntu/grubx64.efi
 
 Le fichier de Linux n'est pas reconnu par le BIOS de l'ACER , d'où le redémarrage impossible
+
+L'installation de Linux est une vraie galère , pour ne plus avoir ce genre de problème , il faudrait
+
+	Soit que ACER modifie son BIOS et fasse comme tous les autres PC
+	Soit que Linux Mint adapte l'installation de grub dans EFI/BOOT et n'essaye plus d'écrire dasn le BIOS
+	
