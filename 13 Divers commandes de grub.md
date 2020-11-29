@@ -1,9 +1,5 @@
 ## Divers commandes de grub
 
-    Date    : 17/11/2020
-    Version : 1.01
-    Auteur  : facila@gmx.fr
-
 Modifier une option au démarrage
 
     taper e pour edit sur une ligne du menu de grub
