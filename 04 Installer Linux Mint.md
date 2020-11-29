@@ -21,7 +21,7 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 	https://www.debugpoint.com/2019/10/how-to-create-persistent-usb-ubuntu-linux-mint/
 
 
-Exécuter l'installation de Linux
+## Exécuter l'installation de Linux
 
 	voir la procédure sur internet
 	
