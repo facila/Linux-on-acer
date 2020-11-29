@@ -14,7 +14,7 @@ J'explique comment installer Linux si comme moi vous avez un ACER et que vous re
 
 	voir la procédure sur internet
 	il y a plusieurs méthodes pour créer la clé USB bootable
-	la suivante , avec mkusb , permet en plus de pouvoir ecrire ensuite sur la clé
+	la suivante , avec mkusb , permet en plus de pouvoir écrire ensuite sur la clé
 	cela peut être interessant pour sauvegarder des fichiers d'installation et les réutiliser en copier/coller
 	https://www.debugpoint.com/2019/10/how-to-create-persistent-usb-ubuntu-linux-mint/
 
