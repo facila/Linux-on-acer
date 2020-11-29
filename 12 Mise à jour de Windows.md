@@ -1,7 +1,5 @@
 ## Mises à jour de Windows
 
-s
-
 Lors des mises à jour , il est possible que la configuration du boot soit modifiée et que le PC ne redémarre plus
 
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
