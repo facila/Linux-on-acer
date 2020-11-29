@@ -15,3 +15,6 @@ Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 Enlever la clé USB et redémarrer
 
 Refaire la procédure pour ajouter Windows dans grub si nécessaire
+
+
+d
