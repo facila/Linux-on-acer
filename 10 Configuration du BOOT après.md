@@ -20,3 +20,5 @@ Linux devient le premier Boot dans le BIOS et Windows Boot Manager disparait
 	Boot2001\* EFI USB Device	RC
 	Boot2002\* EFI DVD/CDROM	RC
 	Boot2003\* EFI Network	    RC
+
+test
