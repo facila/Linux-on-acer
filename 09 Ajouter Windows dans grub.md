@@ -1,4 +1,4 @@
-## Ajouter Windows dans grub
+## Ajouter Windows dans grub , si vous voulez garder Windows en dual boot
 	
 ACER ne permet pas de changer l'ordre de Boot entre Windows et Linux dans le BIOS
 
