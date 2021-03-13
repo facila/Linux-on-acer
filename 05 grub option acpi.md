@@ -6,7 +6,7 @@ Problème rencontré pour booter sur la clé USB Linux Mint 20
 Il faut ajouter acpi=off dans les options de grub
 
 	Malheureusement , avec acpi=off le PC ne s'éteindra plus tout seul
-	Il devient obligatoire d'appuyer sur arret/marche pour eteindre le PC
+	Il devient obligatoire d'appuyer sur marche/arrêt pour éteindre le PC
 	
 ## Ajouter ou supprimer acpi=off au démarrage
 
@@ -46,3 +46,8 @@ Malheureusement , l'inverse est également possible
 
 	Le PC peut ne plus démarrer sans acpi=off suite à des mises à jour
 	Il faut donc recommencer en ajoutant l'option acpi=off
+
+Dans tous les cas , si vous avez ajouté acpi=off
+
+	voir 08 Terminer l'installation
+	faire les tests avec la commande reboot
