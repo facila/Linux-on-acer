@@ -49,5 +49,5 @@ Malheureusement , l'inverse est également possible
 
 Dans tous les cas , si vous avez ajouté acpi=off
 
-	voir 08 Terminer l'installation
+	voir "08 Terminer l'installation"
 	faire les tests avec la commande reboot
