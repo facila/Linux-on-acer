@@ -1,8 +1,9 @@
 ## Terminer l'installation
 
-	Enlever la clé USB et redémarrer le PC
+ 	Arrêter le PC
 	Si vous avez ajouté acpi=off :
-	faire un appui long sur le bouton marche/arret pour arrêter le PC
+		faire un appui long sur le bouton marche/arret pour arrêter le PC
+	Enlever la clé USB
 	
 	Test de acpi=off :
 	1 : redémarrer le PC sans ajouter acpi=off
