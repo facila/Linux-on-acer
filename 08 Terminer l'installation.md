@@ -16,7 +16,7 @@
 	    éteindre le PC	
 
 	3 : redémarrer le PC sans ajouter acpi=off
-    	    si le PC démarre l'installation de Linux est terminée
+	    si le PC démarre l'installation de Linux est terminée
 	    sinon passer au point 4
 
 	4 : redémarrer le PC en ajoutant acpi=off avec la fonction edit de grub
