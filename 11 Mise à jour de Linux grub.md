@@ -14,4 +14,4 @@ Si le PC démarre sur grub> , essayer les commandes suivantes
     
 Si la procédure précédente ne marche pas
 
-    redémarrer sur la clé USB et essayer la procédure "06 réparer grub avec reboot"
+    redémarrer sur la clé USB et essayer la procédure "07 réparer grub avec reboot"
