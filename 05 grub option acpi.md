@@ -5,7 +5,7 @@ Problème rencontré pour booter sur la clé USB Linux Mint 20
 
 Il faut ajouter acpi=off dans les options de grub
 
-	Sur le menu de grub , taper e pour edit
+	Sur le menu de grub , taper e pour edit avant que le démarrage ne commence
   	Ajouter acpi=off aprés /casper/vmlinux ( attention au clavier qwerty a=q )
 	Appuyer sur F10
 	
