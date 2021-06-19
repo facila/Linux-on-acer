@@ -30,11 +30,16 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	editer et ajouter acpi=off si nécessaire
 	
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
-	si il manque un fichier pour la dernière version , ouvrir un terminal en sudo su et executer la commande :
-	dpkg --configure -a
+	si il manque un fichier pour la dernière version
+	ouvrir un terminal en sudo su et exécuter la commande : dpkg --configure -a
 	si un message d'erreur s'affiche sur l'installation de grub , continuer l'installation 
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
 	redémarrer : reboot
 	sur le menu de grub , choisir : Linux Mint ( la première ligne , démarrage normal )
 	
+	Si vous avez de multiples versions suite aux différentes mises à jour
+	vous pouvez faire un peu de ménage en supprimant celle qui sont devenues inutiles ( cela n'est pas obligatoire )
+	ouvrir un terminal en sudo su et exécuter la commande : apt autoremove
+	verifier les fichiers présents : ll /boot
+
 ## Faire "08 Terminer l'installation"
