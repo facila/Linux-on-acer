@@ -25,8 +25,8 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 ## Si cela ne fonctionne pas , il est possible que autre chose que grub ne soit pas correctement installé
 
 	booter sans la clé
-        sur le menu de grub , choisir : advanced
-        démarrer sur la dernière version ayant fonctionnée ( choisir la deuxième ligne vmlinuz.... , ajouter acpi=off si nécessaire )
+	sur le menu de grub , choisir : advanced
+	démarrer sur la dernière version ayant fonctionnée ( choisir la deuxième ligne vmlinuz.... , ajouter acpi=off si nécessaire )
 	
 	verifier que tous les fichiers vmlinuz sont présents sous : /boot
 	si il manque un fichier pour la dernière version , ouvrir un terminal en sudo su et executer la commande :
