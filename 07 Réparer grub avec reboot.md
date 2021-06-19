@@ -32,7 +32,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	si il manque un fichier pour la dernière version , ouvrir un terminal en sudo su et executer la commande :
 	dpkg --configure -a
 	verifier que tous les fichiers vmlinuz sont présents sous : /boot
-        redémarrer : reboot
+	redémarrer : reboot
 	sur le menu de grub , choisir : Linux Mint ( la première ligne )
 	
 ## Faire "08 Terminer l'installation"
