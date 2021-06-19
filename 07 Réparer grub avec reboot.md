@@ -2,7 +2,7 @@
 
 Si le PC se plante , il est obligatoire de le redémarrer sur la clé USB
 
-Cas rencontré avec Linux Mint 19.3
+Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Linux 
 
 ## Lancer un terminal et exécuter les commandes suivantes
 
@@ -21,5 +21,18 @@ Cas rencontré avec Linux Mint 19.3
 	cd /boot/efi/EFI
 	cp ubuntu/grubx64.efi BOOT
 	update-grub                                           création du fichier /boot/grub/grub.cfg
+
+## Si cela ne fonctionne pas , il est possible que autre chose que grub ne soit pas correctement installé
+
+	booter sans la clé
+        sur le menu de grub , choisir : advanced
+        démarrer sur la dernière version ayant fonctionnée ( choisir la deuxième ligne vmlinuz.... , ajouter acpi=off si nécessaire )
+	
+	verifier que tous les fichiers vmlinuz sont présents sous : /boot
+	si il manque un fichier pour la dernière version , ouvrir un terminal en sudo su et executer la commande :
+	dpkg --configure -a
+	verifier que tous les fichiers vmlinuz sont présents sous : /boot
+        redémarrer : reboot
+	sur le menu de grub , choisir : Linux Mint ( la première ligne )
 	
 ## Faire "08 Terminer l'installation"
