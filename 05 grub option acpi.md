@@ -7,6 +7,7 @@ Il faut ajouter acpi=off dans les options de grub
 
 	Malheureusement , avec acpi=off le PC ne s'éteindra plus tout seul
 	Il devient obligatoire d'appuyer sur marche/arrêt pour éteindre le PC
+	De plus , le wifi , le bluetooth , la gestion de l'alimentation , ... ne fonctionnent plus
 	
 ## Ajouter ou supprimer acpi=off au démarrage
 
@@ -50,4 +51,4 @@ Malheureusement , l'inverse est également possible
 Dans tous les cas , si vous avez ajouté acpi=off
 
 	voir "08 Terminer l'installation"
-	faire les tests avec la commande reboot
+	faire les tests avec la commande reboot qui semble permettre de retirer acpi=off
