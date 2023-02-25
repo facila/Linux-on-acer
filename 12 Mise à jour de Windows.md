@@ -5,7 +5,7 @@ Lors des mises à jour , il est possible que la configuration du boot soit modif
 Redémarrer le PC sur la clé USB et exécuter les commandes suivantes
 
 	setxkbmap fr                                            si vous souhaitez passer le clavier en AZERTY
-	sudo su
+	sudo su ou su -
 	mount /dev/sda1 /boot/efi				si /dev/sda1 est la partition EFI
 	cd /boot/efi/EFI
 	si les répertoires MS et Microsoft existent , passer les commandes suivantes
