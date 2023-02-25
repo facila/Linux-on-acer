@@ -7,7 +7,7 @@ Si le PC démarre sur grub> , essayer les commandes suivantes
     grub> normal              -> le PC doit démarrer ( ajouter acpi=off si nécessaire )
     
     lancer un terminal
-    sudo su
+    sudo su ou su -
     cd /boot/efi/EFI
     cp ubuntu/grubx64.efi BOOT
     update-grub
