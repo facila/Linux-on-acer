@@ -7,7 +7,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 ## Lancer un terminal et exécuter les commandes suivantes
 
 	setxkbmap fr                                          si vous souhaitez passer le clavier en AZERTY ( taper setxbk,qp fr )
-	sudo su
+	sudo su ou su -
 	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
 	
 	mount /dev/sda5 /mnt    		              si /dev/sda5 est la partition root de Linux
@@ -31,7 +31,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
 	si il manque un fichier pour la dernière version
-	ouvrir un terminal en sudo su et exécuter la commande : dpkg --configure -a
+	ouvrir un terminal en root sudo su et exécuter la commande : dpkg --configure -a
 	si un message d'erreur s'affiche sur l'installation de grub , continuer l'installation 
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
 	redémarrer : reboot
@@ -39,7 +39,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	
 	Si vous avez de multiples versions suite aux différentes mises à jour
 	vous pouvez faire un peu de ménage en supprimant celle qui sont devenues inutiles ( cela n'est pas obligatoire )
-	ouvrir un terminal en sudo su et exécuter la commande : apt autoremove
+	ouvrir un terminal en sudo su ou su - et exécuter la commande : apt autoremove
 	verifier les fichiers présents : ll /boot
 
 ## Faire "08 Terminer l'installation"
