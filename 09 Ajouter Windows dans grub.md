@@ -16,7 +16,7 @@ Sélectionner 2 et valider , le PC démarre sur Linux
 
 Pour ajouter Windows dans grub , passer les commandes suivantes 
 
-	sudo su
+	sudo su ou su -
 	update-grub                                               pour la prise en compte de Windows par os-prober
 	mv /boot/efi/EFI/Microsoft /boot/efi/EFI/MS	 	  pour supprimer Windows Boot Manager du menu de Boot
 
