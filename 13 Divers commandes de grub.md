@@ -23,7 +23,7 @@ Vérifier les variables de grub
     cmdpath , config_directory , config_file , prefix , root
     il faut donc que les fichiers soient au bon endroit
   
-    en cas de problème , il est possible de modifier les variables et de d'exécuter un démarrage
+    en cas de problème , il est possible de modifier les variables et d'exécuter un démarrage
     pour démarrer , taper :
     grub> set "variable"="valeur"
     grub> insmod normal
