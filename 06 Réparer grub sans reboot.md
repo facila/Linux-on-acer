@@ -11,7 +11,7 @@ Cas rencontré avec Linux Mint 20
 
 ## Lancer un terminal et exécuter les commandes suivantes
 
-	sudo su ou su -
+	"su root" ou "sudo su" ou "su -"
 
 	Les partitions du PC /dev/sd.. sont déjà montées sur /target
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /target$i ; done
