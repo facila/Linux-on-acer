@@ -10,7 +10,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	sudo su ou su -
 	fdisk -l                                              noter le nom de la partition EFI et de la partition root de Linux
 	
-	mount /dev/sda5 /mnt    		              si /dev/sda5 est la partition root de Linux
+	mount /dev/sda5 /mnt    		                  si /dev/sda5 est la partition root de Linux
 	mount /dev/sda1 /mnt/boot/efi		    	      si /dev/sda1 est la partition EFI
 	for i in /dev /dev/pts /proc /sys ; do mount -B $i /mnt$i ; done
 	
@@ -25,13 +25,16 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 ## Si cela ne fonctionne pas , il est possible que autre chose que grub ne soit pas correctement installé
 
 	booter sans la clé
+
+	si le PC démarre sur grub> , taper normal ( clavier QWERTY , m=, et a=q )
+	
 	sur le menu de grub , choisir : options advancées ( deuxième ligne )
 	démarrer sur la dernière version ayant fonctionnée , choisir : x-x-x generic ( deuxième ligne )
 	editer et ajouter acpi=off si nécessaire
 	
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
 	si il manque un fichier pour la dernière version
-	ouvrir un terminal en root sudo su et exécuter la commande : dpkg --configure -a
+	ouvrir un terminal en "su root" et exécuter la commande : dpkg --configure -a
 	si un message d'erreur s'affiche sur l'installation de grub , continuer l'installation 
 	verifier que tous les fichiers initrd.img et vmlinuz sont présents : ll /boot
 	redémarrer : reboot
@@ -39,7 +42,7 @@ Malheureusement plusieurs cas peuvent se présenter à chaque mise à jour de Li
 	
 	Si vous avez de multiples versions suite aux différentes mises à jour
 	vous pouvez faire un peu de ménage en supprimant celle qui sont devenues inutiles ( cela n'est pas obligatoire )
-	ouvrir un terminal en sudo su ou su - et exécuter la commande : apt autoremove
+	ouvrir un terminal en "su root" et exécuter la commande : apt autoremove
 	verifier les fichiers présents : ll /boot
 
 ## Faire "08 Terminer l'installation"
