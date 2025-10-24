@@ -4,8 +4,8 @@ ACER ne permet pas à Linux d'écrire dans son BIOS , même en ayant Secure Boot
 
 De plus , ACER n'autorise que le Boot Mode : [UEFI] avec des valeurs prédéfinies
 
-	Windows Boot Manager 	: /EFI/Microsoft/Boot/bootmgfw.efi
-	Linux			: /EFI/Boot/grubx64.efi
+	Windows Boot Manager : /EFI/Microsoft/Boot/bootmgfw.efi
+	Linux			     : /EFI/Boot/grubx64.efi
 	
 Linux Mint installe le fichier suivant dans la partition EFI
 
